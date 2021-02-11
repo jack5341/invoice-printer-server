@@ -5,8 +5,7 @@ app.register(require('fastify-cors'))
 app.register(require('point-of-view'), {
     engine: {
       ejs: require('ejs')
-    },
-    root: __dirname + "/view"
+    }
 })
 
 // Routes
@@ -19,6 +18,7 @@ app.get('/', function (req, reply) {
     reply.send("Invoice Printer (Server-Side)")
 })
 
+// Port
 const PORT = process.env.PORT || 8080
 app.listen(PORT, (err, address) => {
     if (err) {
