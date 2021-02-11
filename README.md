@@ -19,10 +19,11 @@ In editor path you'll see a4 layout you can replace your infos with default inpu
 
 # Client Side
 Frontend is powered by React.js and Chakra UI.
+<a target="_blank" href="https://github.com/jack5341/invoice-printer-client">Frontend Repository</a>
+
 
 # Server Side
 Server is powered by Fastify i choose it for speed.
-<a target="_blank" href="https://github.com/jack5341/invoice-printer-server">Server Repository</a>
 
 # How to install ?
 
