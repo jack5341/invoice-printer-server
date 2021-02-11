@@ -8,11 +8,11 @@ module.exports.Invoice = async (req, res) => {
     const browser = await puppeteer.launch({headless: true,
         args: ["--no-sandbox",
 		"--disable-setuid-sandbox"]
-    });
+    }).catch(err => console.log(err));
     const page = await browser.newPage();
-    await page.goto('http://localhost:8080/layout/invoice/' + req.body.token, {
+    await page.goto('https://invoice-printer-fastify.herokuapp.com/layout/invoice/' + req.body.token, {
         waitUntil: "networkidle2"
-    });
+    }).catch(err => console.log(err));
     await page.pdf({ path: 'process-file.pdf', format: 'A4' }).catch(err => console.log(err));
     res.send({
         process: true,
