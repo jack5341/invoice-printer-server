@@ -18,12 +18,10 @@ app.get('/', function (req, reply) {
     reply.send("Invoice Printer (Server-Side)")
 })
 
-// Port
-const PORT = process.env.PORT || 5000
-app.listen(PORT, (err, address) => {
+// Run the server!
+app.listen(process.env.PORT || 8080, '0.0.0.0',function (err) {
     if (err) {
-        app.log.error(err)
-        process.exit(1)
+        fastify.log.error(err)
+        throw Error(err);
     }
-    console.log(`server listening on ${address}`)
-})
+  })
