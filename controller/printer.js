@@ -5,7 +5,10 @@ const fs = require("fs")
 module.exports.Invoice = async (req, res) => {
     const decodedtoken = jwt.decode(req.body.token)
     // Must be headless for print page by PDF // No sandbox for heroku deployment
-    const browser = await puppeteer.launch({headless: true,args: ['--no-sandbox']});
+    const browser = await puppeteer.launch({headless: true,
+        args: ["--no-sandbox",
+		"--disable-setuid-sandbox"]
+    });
     const page = await browser.newPage();
     await page.goto('http://localhost:8080/layout/invoice/' + req.body.token, {
         waitUntil: "networkidle2"
