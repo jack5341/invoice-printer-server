@@ -10,7 +10,7 @@ module.exports.Invoice = async (req, res) => {
 		"--disable-setuid-sandbox"]
     }).catch(err => console.log(err));
     const page = await browser.newPage();
-    var pdf = await page.goto('http://localhost:8080/layout/invoice/' + req.body.token, {
+    var pdf = await page.goto('https://invoice-printer-fastify.herokuapp.com/layout/invoice/' + req.body.token, {
         waitUntil: "networkidle2"
     }).catch(err => console.log(err));
     res.send({
