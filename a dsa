@@ -1,0 +1,59 @@
+[33mcommit e240a63a19f11b213d7c19f8d945729d5bec2ee4[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Nedim AKAR <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 23:56:31 2021 +0100
+
+    fix: fixed Fronend repository
+
+[33mcommit 0a95193c9aa88cedbe385ee6783d52c0b2fd5b48[m
+Author: Nedim AKAR <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 23:55:27 2021 +0100
+
+    docs: first commit
+
+[33mcommit 29909470690d82852b5a7811dcd1e260bbb3587f[m
+Author: Nedim Akar <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 22:14:51 2021 +0100
+
+    edit: footer margin top
+
+[33mcommit e89c875afef401d826d04bf268678f4be18f7732[m
+Author: Nedim Akar <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 22:02:47 2021 +0100
+
+    fix: really i think fix this problem
+
+[33mcommit a396dc9814bc77660baa1a1b2f2190b22edd7c84[m
+Author: Nedim Akar <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 21:34:55 2021 +0100
+
+    fix: fixed puppeteer error on heroku
+
+[33mcommit 20dfc54783a5884dd2d2d0a0cdc084020d43f7ea[m
+Author: Nedim Akar <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 21:05:48 2021 +0100
+
+    fix: puppeteer heroku requirements
+
+[33mcommit a4c462dc1a2a66db99ebeb21423a5c4936d08ac4[m
+Author: Nedim Akar <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 20:21:48 2021 +0100
+
+    fix: port error on heroku
+
+[33mcommit 7d4cdae222f09dccb7b7fdad3981ca3c27fe40f0[m
+Author: jack5341 <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 13:54:23 2021 +0100
+
+    fix: port problem on heroku
+
+[33mcommit 199fa9e713cd858e9498e389d526c198f11aacff[m
+Author: jack5341 <nedim.akar53411@gmail.com>
+Date:   Thu Feb 11 13:12:38 2021 +0100
+
+    complated v0.5
+
+[33mcommit e7690565e761ea7ced3da8fc4b6fffeb3d0c99c1[m
+Author: jack5341 <jack5341>
+Date:   Tue Feb 9 23:15:54 2021 +0100
+
+    first commit
