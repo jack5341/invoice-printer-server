@@ -2,7 +2,7 @@
 <p>
 <a href="https://invoiceprinter.com/"><img src="https://img.shields.io/badge/-invoiceprinter-017180?style=flat&logo=Google-Chrome&logoColor=white"/></a>
 <img alt="Version" src="https://img.shields.io/badge/version-0.5.0-blue.svg?cacheSeconds=2592000" />
-<img alt="License" src="https://img.shields.io/github/license/jack5341/invoice-printer-client"/>
+<img alt="License" src="https://img.shields.io/github/license/jack5341/invoice-printer-server"/>
 <p>
 
 [Buy me Beer 🍺](https://paypal.me/nedimakar5341)
