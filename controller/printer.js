@@ -1,23 +1,22 @@
 const jwt = require("jsonwebtoken")
 const puppeteer = require("puppeteer")
-const fs = require("fs")
 
 module.exports.Invoice = async (req, res) => {
     const decodedtoken = jwt.decode(req.body.token)
     // Must be headless for print page by PDF // No sandbox for heroku deployment
-    const browser = await puppeteer.launch({headless: true,
+    const url = `http://localhost:8080/layout/invoice/${req.body.token}`
+    const browser = await puppeteer.launch({
+        headless: true,
         args: ["--no-sandbox",
 		"--disable-setuid-sandbox"]
-    }).catch(err => console.log(err));
-    const page = await browser.newPage();
-    await page.goto('https://localhost:8080/layout/invoice/' + req.body.token, {
-        waitUntil: "networkidle2"
-    }).catch(err => console.log(err));
-    await page.pdf({ path: 'process-file.pdf', format: 'A4' }).catch(err => console.log(err));
+    })
+    const page = await browser.newPage()
+    await page.goto(url)
+    var pdf = await page.pdf({ path: 'process-file.pdf', format: 'A4' })
+    const buf = Buffer.from(pdf, 'base64');
     res.send({
-        process: true,
-        file: fs.readFileSync('process-file.pdf', {encoding: 'base64'}),
-        filename: decodedtoken.Company
+        fileName: decodedtoken.Company,
+        file: buf.toString("base64")
     })
 }
 
