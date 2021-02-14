@@ -4,7 +4,7 @@ const puppeteer = require("puppeteer")
 module.exports.Invoice = async (req, res) => {
     const decodedtoken = jwt.decode(req.body.token)
     // Must be headless for print page by PDF // No sandbox for heroku deployment
-    const url = `http://localhost:8080/layout/invoice/${req.body.token}`
+    const url = `http://invoice-printer-fastify.herokuapp.com/layout/invoice/${req.body.token}`
     const browser = await puppeteer.launch({
         headless: true,
         args: ["--no-sandbox",
