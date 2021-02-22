@@ -1,23 +1,28 @@
 {
-  "name": "invoice-printer-server",
+  "name": "invoice-printer-web-api",
   "version": "1.0.0",
-  "description": "The invoice printer server side",
+  "description": "invoice-printer-web-api project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node ./lib/index.js",
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "devbuild": "nodemon --exec babel-node ./lib/index.js",
+    "build": "babel --presets es2015 -d lib/ src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "jack5341",
   "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^2.0.7"
+  },
   "dependencies": {
-    "cors": "^2.8.5",
     "ejs": "^3.1.6",
-    "fastify": "^3.11.0",
+    "fastify": "^3.12.0",
     "fastify-cors": "^5.2.0",
-    "fastify-express": "^0.3.2",
     "jsonwebtoken": "^8.5.1",
-    "nodemon": "^2.0.7",
-    "point-of-view": "^4.12.0",
-    "puppeteer": "^7.0.3"
+    "point-of-view": "^4.13.0",
+    "puppeteer": "^7.1.0"
   }
 }

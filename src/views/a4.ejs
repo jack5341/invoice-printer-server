@@ -1,0 +1,80 @@
+<style>
+    * {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-weight: bolder;
+    }
+
+    body {
+        width: 21cm;
+        height: 29.7cm;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .container .header .company-name {
+        font-size: 3rem;
+    }
+
+    .container .header .company_slogan {
+        font-size: 1.4rem;
+    }
+
+    .container .left-side .company-name{
+        font-weight: 800;
+        font-size: 1.5rem;
+        margin: 1rem 0px 1rem 0;
+    }
+
+    @media print {
+        @page {
+            margin: 0;
+        }
+
+        body {
+            margin: 1.6cm;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="col header">
+            <p class="company-name">
+                <%- object.owner.company %>
+            </p>
+            <p class="company_slogan">
+                <%- object.owner.slogan %>
+            </p>
+        </div>
+        <div class="col" style="text-align: center;">
+            <img src="https://logocdn.com/_img/logo-cdn.png" height="150" alt="owner-logo" />
+        </div>
+        <div class="col left-side">
+            <p class="company-name">
+                <%- object.owner.company %>
+            </p>
+            <p class="company_slogan">
+                <%- object.owner.slogan %>
+            </p>
+            <p class="company_slogan">
+                <%- object.owner.slogan %>
+            </p>
+        </div>
+        <div class="col" style="margin-top: 5rem;">
+            <p class="company-name">
+                <%- object.owner.company %>
+            </p>
+            <p class="company_slogan">
+                <%- object.owner.slogan %>
+            </p>
+        </div>
+    </div>
+</body>
