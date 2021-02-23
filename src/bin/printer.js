@@ -1,6 +1,7 @@
 import puppeteer from 'puppeteer'
 
 export default async (req, res) => {
+    console.log(req.params["*"])
     const browser = await puppeteer.launch({
         headless: true,
         args: ["--no-sandbox",

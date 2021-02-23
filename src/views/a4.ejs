@@ -30,7 +30,13 @@
     .container .left-side .company-name{
         font-weight: 800;
         font-size: 1.5rem;
+        text-align: left;
         margin: 1rem 0px 1rem 0;
+    }
+
+    .container .right-side {
+        text-align: right;
+        padding-right: 9rem;
     }
 
     @media print {
@@ -68,7 +74,7 @@
                 <%- object.owner.slogan %>
             </p>
         </div>
-        <div class="col" style="margin-top: 5rem;">
+        <div class="col right-side" style="margin-top: 5rem;">
             <p class="company-name">
                 <%- object.owner.company %>
             </p>

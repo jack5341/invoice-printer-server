@@ -15,12 +15,11 @@ LayoutsRoutes.forEach((route, index) => {
 })
 
 app.get("/", (req, res) => {
-    res.send("Invoice-Printer-API")
+    res.send("Invoice-Printer-Web-API")
 })
 
 app.post("/", (req, res) => {
     const raw_post = req.body
-
     switch ((raw_post.layout).toLowerCase()) {
         case "a4":
             const token = jwt.sign(raw_post, "shhhhh")
