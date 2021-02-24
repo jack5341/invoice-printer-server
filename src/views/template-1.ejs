@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Maded by github@ofsahof -->
+    <style>
+        *,*::before,*::after {
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 842px;
+            width: 595px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 40px;
+            position: relative;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            grid-template-rows: repeat(6,1fr);
+            grid-template-areas: 
+            "company company invoice invoice" 
+            "bill bill . ."
+            "description description description description"
+            "description description description description"
+            "comments comments total total "
+            "message message message message";
+        }
+        
+        div {
+            height:100%;
+            width:100%;
+            font-size: 9pt;
+        }
+
+        .company-infos {
+            grid-area: company;
+        }
+        
+        .invoice-infos {
+            grid-area: invoice;
+        }
+
+        .bill-infos {
+            grid-area: bill;
+        }
+
+        .description {
+            grid-area: description;
+        }
+
+        .comments {
+            grid-area: comments;
+        }
+        
+        .total {
+            grid-area: total;
+        }
+
+        .message {
+            grid-area: message;
+            background-color:burlywood;
+            text-align:center;
+            font-size:1.2em;
+            padding-top:15px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size:22pt;
+            color: #7a8dc5;
+        }
+
+        h2 {
+            font-size:15pt;
+            color:#3b4e87;
+        }
+
+        h3 {
+            background-color: #3b4e87;
+            color: #fff;
+            font-size:1.4em;
+            padding: 3px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .right{
+            text-align: right;
+        }
+
+        .center {
+            text-align:center;
+        }
+
+         td.bordered {
+            text-align: left;
+            border:1px solid #000;
+        }
+
+        .border {
+            border-left: .8px solid #000;
+            border-right: .8px solid #000;
+        }
+
+        .invoice-infos tr:last-child td:last-child {
+            background-color: #d2d9ec;
+        }
+
+        .description {
+            width:100%;
+        }
+
+        .space{
+            padding:5px;
+        }
+
+        .comments {
+            border:.5px solid #000;
+        }
+
+        .border-top {
+            border-top:.8px solid #000;
+        }
+
+        .total  {
+            width:100%;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="company-infos">
+                <h2>Company Name</h2>
+                <p>Street Address</p>
+                <p>City, ZT ZIP</p>
+                <p>Phone: 0505 505 5050</p>
+                <p>Fax: 0000000</p>
+                <p>Website: jack5342.github.io</p>
+            </div>
+            <div class="invoice-infos">
+                <h1>Invoice</h1>
+                <table width="100%">
+                    <tr>
+                        <td class="right">Date &nbsp;</td>
+                        <td class="bordered">24/02/2021 &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="right">Invoice ID &nbsp;</td>
+                        <td class="bordered">123456</td>
+                    </tr>
+                    <tr>
+                        <td class="right">Customer ID &nbsp;</td>
+                        <td class="bordered">654321</td>
+                    </tr>
+                    <tr>
+                        <td class="right">Due Date &nbsp;</td>
+                        <td class="bordered">24/12/2021</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bill-infos">
+                <h3>BILL TO</h3>
+                <p>Name</p>
+                <p>Company Name</p>
+                <p>Street Address</p>
+                <p>City, ST ZIP</p>
+                <p>Phone</p>
+            </div>
+            <div class="description">
+                <table class="description">
+                    <tr class="border">
+                        <td class="center"><h3>Description</h3></td>
+                        <td class="center"><h3>Taxed</h3></td>
+                        <td class="center"><h3>Amount</h3></td>
+                    </tr>
+                    <tr class="border">
+                        <td class="space border">Bazı kitlenmiş şeyler</td>
+                        <td></td>
+                        <td class="right space border">230.00€</td>
+                    </tr>
+                    <tr class="border">
+                        <td class="space border">Bazı kitlenmiş şeyler</td>
+                        <td class="center border">X</td>
+                        <td class="right space border">210.00€</td>
+                    </tr>
+                    <tr class="border">
+                        <td class="space border">Bazı kitlenmiş şeyler</td>
+                        <td></td>
+                        <td class="right space border">250.00€</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="comments">
+                <h3>Other Comments</h3>
+                    <p>Total Payment due in 30 days</p>
+                    <p>Please include your invoice number on your check</p>
+            </div>
+            <div class="total">
+                <table class="total">
+                    <tr>
+                        <td class="space">Sub Total</td>
+                        <td class="right space">950.00</td>
+                    </tr>
+                    <tr>
+                        <td class="space">Taxable</td>
+                        <td class="right space">950.00</td>
+                    </tr>
+                    <tr>
+                        <td class="space">Tax Rate</td>
+                        <td class="right space">950.00</td>
+                    </tr>
+                    <tr>
+                        <td class="space">Tax Due</td>
+                        <td class="right space">950.00</td>
+                    </tr>
+                    <tr>
+                        <td class="space">Other</td>
+                        <td class="right space">950.00</td>
+                    </tr>
+                    <tr class="border-top">
+                        <td class="space"><b>TOTAL</b></td>
+                        <td class="right space"><b>1250.00</b></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message">
+                <p>If you have any questions about invoice, pls contact</p>
+                <p>Name, 000 000 0000</p>
+                <p><b><i> Thank You For Your Bussiness! </i</b></p>
+            </div>
+        </div>
+    </body>
+</html>
