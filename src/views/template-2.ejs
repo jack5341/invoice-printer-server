@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rechnung Template</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
+        .a4 {
+            width: 21cm;
+            height: 29.7cm;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .a4>.container {
+            padding: 20px 40px;
+        }
+
+        .company-name {
+            text-align: left;
+        }
+
+        .company-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .rechnung-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .rechnung-left {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            width: 8cm;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .border-bottom {
+            border-bottom: 3px solid black;
+        }
+
+        .border-top {
+            border-top: 3px solid black;
+        }
+
+        .tr-list {
+            text-align: left;
+        }
+
+        .thin-border-bottom {
+            border-bottom: 1px solid black;
+        }
+
+        .thin-border-top {
+            border-top: 1px solid black;
+        }
+
+        .add-paddings {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .add-paddings2 {
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin-top: 40px;
+        }
+
+        @media print {
+            @page {
+                margin: 0;
+            }
+
+            body {
+                margin: 1.6cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a4">
+        <div class="container">
+            <h1 class="company-name">
+                Firma Ismi
+            </h1>
+            <div class="company-info">
+                <div>
+                    <address>
+                        <small>Muster GmbH Lange Str. 2 | 10245 Berlin</small><br><br>
+                        Habermann & Söhne<br>
+                        Schnurlos Str. 81<br>
+                        34131 Kassel<br>
+                    </address>
+                </div>
+                <div style="margin-right: 50px;">
+                    Muster GmbH<br>
+                    Lange Str. 2<br>
+                    10245 Berlin<br>
+                    <b>Tel:</b> +49 (0) 30 2121356<br><br>
+                    mail@muster.de<br>
+                    www.muster.de<br>
+                </div>
+            </div>
+            <h2>
+                Rechnung
+            </h2>
+            <div class="rechnung-info">
+                <div>
+                    <div class="rechnung-left">
+                        <div>
+                            Rechnungs-Nr:<br>
+                            Auftrags-Nr:<br>
+                            Komission:<br>
+                            Kunden-Nr:<br>
+                            Bestell-Nr:<br>
+                        </div>
+                        <div>
+                            M1675<br>
+                            O1727<br>
+                            Bestellung Gerstner<br>
+                            1068<br>
+                            369852<br>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="rechnung-left">
+                        <div>
+                            Rechnungsdatum:<br>
+                            Lieferdatum:<br>
+                            Bearbeiter:<br>
+                            Telefon:<br>
+                            E-Mail:<br>
+                        </div>
+                        <div>
+                            28.05.14<br>
+                            28.05.14<br>
+                            Dorothea Schäfer<br>
+                            030 2121359<br>
+                            mail@muster.de<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="price-table">
+                <tr class="border-bottom border-top tr-list">
+                    <th class="add-paddings">
+                        Pos.
+                    </th>
+                    <th>
+                        Art-Nr.
+                    </th>
+                    <th>
+                        Bezeichnung
+                    </th>
+                    <th>
+                        Menge
+                    </th>
+                    <th>
+                        Einheit
+                    </th>
+                    <th>
+                        Lieferdatum
+                    </th>
+                    <th>
+                        E-Preis €
+                    </th>
+                    <th>
+                        Gesamt €
+                    </th>
+                </tr>
+                <tr>
+                    <td class="add-paddings">
+                        1
+                    </td>
+                    <td>
+                        B-3025-078
+                    </td>
+                    <td>
+                        <b>B-3025, Farbe Grün</b>
+                    </td>
+                    <td>
+                        1,00
+                    </td>
+                    <td>
+                        Stk.
+                    </td>
+                    <td>
+                        20.01.2020
+                    </td>
+                    <td>
+                        47,00
+                    </td>
+                    <td>
+                        47,00
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="add-paddings">
+                        1
+                    </td>
+                    <td>
+                        B-3025-078
+                    </td>
+                    <td>
+                        <b>B-3025, Farbe Grün</b>
+                    </td>
+                    <td>
+                        1,00
+                    </td>
+                    <td>
+                        Stk.
+                    </td>
+                    <td>
+                        20.01.2020
+                    </td>
+                    <td>
+                        47,00
+                    </td>
+                    <td>
+                        47,00
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="add-paddings">
+                        1
+                    </td>
+                    <td>
+                        B-3025-078
+                    </td>
+                    <td>
+                        <b>B-3025, Farbe Grün</b>
+                    </td>
+                    <td>
+                        1,00
+                    </td>
+                    <td>
+                        Stk.
+                    </td>
+                    <td>
+                        20.01.2020
+                    </td>
+                    <td>
+                        47,00
+                    </td>
+                    <td>
+                        47,00
+                    </td>
+                </tr>
+            </table>
+
+            <div class="summary">
+                <div>
+
+                </div>
+                <div>
+                    <table style="width: 100%; border-collapse: collapse; ">
+                        <tr class="thin-border-bottom thin-border-top">
+                            <td class="add-paddings2">Summe Netto</td>
+                            <td>€</td>
+                            <td>262,99</td>
+                        </tr>
+                        <tr class="thin-border-bottom">
+                            <td class="add-paddings2">19,00% Ust. auf 262,99</td>
+                            <td>€</td>
+                            <td>49,97</td>
+                        </tr>
+                        <tr>
+                            <td class="add-paddings2"><b>Endsumme</b></td>
+                            <td>€</td>
+                            <td>312,96</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px">
+                Lieferbedingung: Postversand<br>
+                10 tage 5% Skonto, 30 Tage ohne Abzug
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
